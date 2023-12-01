@@ -1,0 +1,96 @@
+/*
+darknavy = #020659
+n.avy = #020873
+royalbl = #030ABC
+ltbl = #0D8DFB
+medbl = #2104D9
+skybl = #2699FB
+burg = #590242
+
+fonts verdana, geneva, tahoma, sans-serif
+
+font size h1{1.25em} h2, h3{1em} p, dl, dd{1em} footer p{.75em}
+
+body auto to display in the center of the viewport window
+*/
+
+*{
+    background-color:#020659;
+    color:white;
+}
+
+body{
+    margin:0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    display:inline;
+}
+
+ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+@media screen and (min-width:834px) {
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    label span, input {
+        display: none;
+    }
+}
