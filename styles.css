@@ -180,6 +180,16 @@ h2 {
     text-transform: uppercase;
     padding-left: 30px;
 }
+.scrolling{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.scrolling section {
+    margin:10px;
+    position: relative;
+}
 .scrolling > div {
     margin: 10px;
     position: relative;
