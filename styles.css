@@ -27,9 +27,17 @@ body {
 }
 h1, h2, h3 {
     color: #590242;
-    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+}
+h2, h3 {
+    font-size: 1em;
+}
+p, dl, dd {
+    font-size: 1em;
+}
+footer p {
+    font-size: .75em;
 }
 .more {
     display: block;
@@ -64,7 +72,7 @@ h1, header p {
     margin: 0;
 }
 h1 {
-    font-size: 22px;
+    font-size: 1.25em;
     color: white;
 }
 
@@ -221,7 +229,7 @@ audio {
     color: rgba(225, 225, 225, .5);
 }
 audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button {
-    background-color: #fff;
+    background-color: white;
     border-radius: 20px;
 }
 audio::-webkit-media-controls-enclosure {
@@ -231,7 +239,7 @@ audio::-webkit-media-controls-enclosure {
 /*************************************************/
 
 h3, p {
-    color: #fff;
+    color: white;
 }
 #yours .scrolling {
     background-color: #2699FB;
@@ -255,7 +263,7 @@ h3, p {
     border-radius: 5px;
 }
 #yours ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
-    background: #fff;
+    background: white;
 }
 #curated .scrolling {
     background-color: #020659;
@@ -307,33 +315,33 @@ footer {
             font-variant: none;
             height: 10px;
             justify-content: space-around;
-        }
-        label, label span, input {
-            display: none;
-        }
-        main {
-            padding-bottom: 50px;
-        }
-        .wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            width: inherit;
-        }    
-        article .scrolling {   
-            display: flex;
-            flex-direction: column;
-            overflow-x: hidden;
-            overflow-y: auto;
-            height: 600px;
-        }
-        .scrolling img {
-            float: left;
-        }
-        #curated p {
-            margin-bottom: 0;
-            text-indent: 10px;
-        }
-        article, footer {
-        clear: both;
-        }
+    }
+    label, label span, input {
+        display: none;
+    }
+    main {
+        padding-bottom: 50px;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: inherit;
+    }    
+    article .scrolling {   
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: 600px;
+    }
+    .scrolling img {
+        float: left;
+    }
+    #curated p {
+        margin-bottom: 0;
+        text-indent: 10px;
+    }
+    article, footer {
+    clear: both;
+    }
 }
