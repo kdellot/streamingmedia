@@ -24,6 +24,7 @@ body {
     background-color: white;
     width: 375px;
     margin: 0 auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 h1, h2, h3 {
     color: #590242;
