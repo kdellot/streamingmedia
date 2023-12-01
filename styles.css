@@ -119,7 +119,7 @@ nav {
      font-variant: small-caps;
      text-decoration: none;
      font-weight: bold;
-     color: #fff;
+     color: white;
      font-size: 22px;
      padding: 0;
      margin: 0;
@@ -132,7 +132,7 @@ nav {
      user-select: none;
  }
  label span {
-     background-color: #ffffff;
+     background-color: white;
      display: block;
      height: 2px;
      position: relative;
@@ -140,7 +140,7 @@ nav {
      width: 18px;
  }
  label span:before, label span:after {
-     background: #ffffff;
+     background: white;
      content: '';
      display: block;
      height: 100%;
