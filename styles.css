@@ -1,88 +1,292 @@
-/*
-darknavy = #020659
-n.avy = #020873
-royalbl = #030ABC
-ltbl = #0D8DFB
-medbl = #2104D9
-skybl = #2699FB
-burg = #590242
+/**************
 
-fonts verdana, geneva, tahoma, sans-serif
+~~~~~Colors!~~~~
 
-font size h1{1.25em} h2, h3{1em} p, dl, dd{1em} footer p{.75em}
+#020659
+#020873
+#030ABC
+#0D8DFB
+#2104D9
+#2699FB
+#590242
+
+~~~~~~~fonts~~~~~~ verdana, geneva, tahoma, sans-serif
+
+~~~~font size ~~~~ h1{1.25em} h2, h3{1em} p, dl, dd{1em} footer p{.75em}
 
 body auto to display in the center of the viewport window
 */
 
-*{
-    background-color:#020659;
+html {
+    background-color: #020659;
+}
+body {
+    background-color: white;
+    width: 375px;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    color: #590242;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.more {
+    display: block;
+    text-align: center;
+    width: 30%;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #590242;
+}
+.more:hover {
+    background-color: #020659;
+}
+.scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+/*************************************************/
+
+header {
+    margin-top: 70px;
+    padding: 0 30px 20px;
+    background: #020873;
+    background: linear-gradient(90deg, #030ABC 10%, #020659 50%,#000220 100%);
     color:white;
 }
-
-body{
-    margin:0 auto;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+h1, header p {
+    margin: 0;
+}
+h1 {
+    font-size: 22px;
+    color: white;
 }
 
-nav{
-    display:inline;
-}
+/*************************************************/
 
-ul {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
-}
-label {
-    cursor: pointer;
-    display: inline-block;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-}
-label span {
-    background-color: #ffffff;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background-color .2s ease-out;
-    width: 18px;
-}
-label span:before, label span:after {
-    background: #ffffff;
-    content: '';
-    display: block;
-    height: 100%;
+nav {
     position: absolute;
-    transition: all .2s ease-out;
+    top: 0px;
+    background-color:#020873;
+    height: 70px;
+ }
+ ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     overflow: hidden;
+     max-height: 0;
+     transition: max-height .2s ease-out;
+     width: 374px;
+ }
+ li  {
+     background-color: #020873;
+     display: block;
+     padding: 10px 10px;
+     text-decoration: none;
+     text-align: center;
+     
+ }
+ li a {
+     width: 250px;
+     text-decoration: none;
+     font-size: 20px;
+     color: white;
+     
+ }
+ li:hover {
+     background-color: #590242;
+ }
+ li:first-child {
+     position: absolute;
+     top: 15px;
+     right: 120px;
+     font-variant: small-caps;
+     text-decoration: none;
+     font-weight: bold;
+     color: #fff;
+     font-size: 22px;
+     padding: 0;
+     margin: 0;
+ }
+ label {
+     cursor: pointer;
+     display: inline-block;
+     padding: 28px 20px;
+     position: relative;
+     user-select: none;
+ }
+ label span {
+     background-color: #ffffff;
+     display: block;
+     height: 2px;
+     position: relative;
+     transition: background-color .2s ease-out;
+     width: 18px;
+ }
+ label span:before, label span:after {
+     background: #ffffff;
+     content: '';
+     display: block;
+     height: 100%;
+     position: absolute;
+     transition: all .2s ease-out;
+     width: 100%;
+ }
+ label span:before {
+     top: 5px;
+ }
+ label span:after {
+     top: -5px;
+ }
+ input {
+     display: none;
+ }
+ input:checked ~ ul {
+     max-height: 500px;
+ }
+ input:checked ~ label span {
+     background: transparent;
+ }
+ input:checked ~ label span:before {
+     transform: rotate(-45deg);
+ }
+ input:checked ~ label span:after {
+     transform: rotate(45deg);
+ }
+ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+     top: 0;
+ }
+
+/*************************************************/
+
+
+h2 {
+    text-transform: uppercase;
+    padding-left: 30px;
+}
+.scrolling > div {
+    margin: 10px;
+    position: relative;
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+.aboutsong {
+    position: absolute; 
+    top: 251px;
+    color: #590242;
+    background-color: rgba(225, 225, 225, .75);
     width: 100%;
+    height: 60px;
 }
-label span:before {
-    top: 5px;
+main h3 {
+    margin-bottom: 0;
+    padding-left: 10px;
 }
-label span:after {
-    top: -5px;
+dl {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0;
+    padding-left: 35px;
+    font-style: italic;
 }
-input {
-    display: none;
+dt {
+    padding-right: 5px;
+    width:5px;
 }
-input:checked ~ ul {
-    max-height: 500px;
+dd {
+    font-style: normal;
 }
-input:checked ~ label span {
-    background: transparent;
+audio {
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+    color: rgba(225, 225, 225, .5);
 }
-input:checked ~ label span:before {
-    transform: rotate(-45deg);
+audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-play-button {
+    background-color: #fff;
+    border-radius: 20px;
 }
-input:checked ~ label span:after {
-    transform: rotate(45deg);
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(225, 225, 225, .75);
 }
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
-    top: 0;
+
+/*************************************************/
+
+h3, p {
+    color: #fff;
 }
+#yours .scrolling {
+    background-color: #2699FB;
+}
+#yours .scrolling section {
+    background-color: #0D8DFB;
+    padding: 10px;
+    text-align: center;
+}
+#yours .scrolling section:hover, #curated .scrolling section:hover {
+    background-color: #590242;
+}
+#yours ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#yours ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #020659;
+}
+#yours ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#yours ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+#curated .scrolling {
+    background-color: #020659;
+}
+#curated .scrolling section {
+    background-color: #020873;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*************************************************/
+
+footer {
+    margin: 0 auto;
+    color:#590242;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/*************************************************/
+
 
 @media screen and (min-width:834px) {
+    body {
+        width: 834px;
+    }
+    nav {
+        width: inherit;
+        background-color: #020873;
+    }
     ul {
         overflow: visible;
         position: absolute;
@@ -93,4 +297,43 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     label span, input {
         display: none;
     }
+     li, li:first-child {
+            background-color:#020873;
+            display: block;
+            padding: 30px;
+            position: relative;
+            top: auto;
+            right: auto;
+            font-variant: none;
+            height: 10px;
+            justify-content: space-around;
+        }
+        label, label span, input {
+            display: none;
+        }
+        main {
+            padding-bottom: 50px;
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: inherit;
+        }    
+        article .scrolling {   
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 600px;
+        }
+        .scrolling img {
+            float: left;
+        }
+        #curated p {
+            margin-bottom: 0;
+            text-indent: 10px;
+        }
+        article, footer {
+        clear: both;
+        }
 }
